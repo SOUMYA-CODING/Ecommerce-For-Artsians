@@ -1,0 +1,25 @@
+.navbar {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.navbar-brand {
+    img {
+        width: 150px;
+    }
+}
+
+.navbar-nav {
+    .nav-item {
+        margin: .3rem;
+
+        .nav-link {
+            color: #111;
+            letter-spacing: .5px;
+            cursor: pointer;
+
+            &:hover {
+                color: #4169E1;
+            }
+        }
+    }
+}

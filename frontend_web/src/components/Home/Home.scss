@@ -1,0 +1,501 @@
+// Hero Section
+.hero-section {
+    width: 100%;
+    height: 500px;
+    margin-top: 5.5rem;
+
+    .banner {
+        width: 100%;
+        height: 550px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #F2F3F5;
+        margin-top: 2rem;
+
+        section {
+            width: 50%;
+        }
+
+        .banner-description {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding-left: 5rem;
+
+            h1 {
+                text-transform: uppercase;
+                font-size: 50px;
+                font-weight: 600;
+            }
+
+            p {
+                font-size: 18px;
+                letter-spacing: 0.5px;
+            }
+
+            .btn {
+                padding: 1rem 1.7rem;
+                width: 170px;
+                border-radius: 0;
+                background-color: #1C1D25;
+                color: #fff;
+
+                &:hover {
+                    box-shadow: 0px 0px 8px 0px #1C1D25;
+                }
+            }
+        }
+
+        .banner-img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            img {
+                width: 370px;
+                z-index: 1;
+            }
+
+            .item-description {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+
+                .item-card {
+                    border-radius: 5px;
+                    padding: 1.5rem;
+                    width: 300px;
+                    height: 200px;
+                    background-color: #fff;
+
+                    strike {
+                        font-size: 12px;
+                    }
+
+                    p {
+                        margin: 0;
+                    }
+
+                    h4 {
+                        font-weight: 600;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: #111;
+                    }
+                }
+            }
+
+            .discount-tag {
+                position: absolute;
+                top: 70px;
+                right: 140px;
+                z-index: 10;
+
+                p {
+                    padding: 3rem;
+                    width: 10px;
+                    height: 10px;
+                    background-color: #FFA500;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    color: #fff;
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}
+
+// Top Seller Section
+.top-seller {
+    width: 100%;
+    height: auto;
+    margin-top: 6rem;
+    margin-bottom: 1rem;
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h5 {
+            padding: 0;
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #111;
+        }
+    }
+
+    .top-seller-products {
+        margin-top: 1.2rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .product-card {
+            width: 15.5rem;
+            height: auto;
+            background-color: #F2F3F5;
+            padding: 10px;
+            position: relative;
+            cursor: pointer;
+
+            img {
+                width: 100%;
+            }
+
+            .tag {
+                padding: 0 5px;
+                position: absolute;
+                text-transform: uppercase;
+                color: #fff;
+                background-color: #FFA500;
+                font-size: 13px;
+                border-radius: 2px;
+                top: 10px;
+            }
+
+            .btn {
+                width: 150px;
+                position: absolute;
+                background-color: #111;
+                border-radius: 0;
+                color: #fff;
+                text-transform: uppercase;
+                margin-left: 2.5rem;
+                margin-top: -3rem;
+
+                display: none;
+
+                box-shadow: 0px 0px 8px 0px #111;
+            }
+
+            .product-body {
+                h6 {
+                    font-weight: 600;
+                }
+
+                p {
+                    strike {
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            &:hover {
+
+                .btn {
+                    display: block;
+                }
+
+                background-color: rgba($color: #000000, $alpha: 0.5);
+            }
+        }
+    }
+}
+
+// Offer Deals Section
+.offer-deals {
+    width: 100%;
+    height: auto;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        section {
+            background-color: #F8F3F0;
+            width: 50%;
+            padding: 2rem;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:nth-child(1) {
+                margin-right: 10px;
+            }
+
+            &:nth-child(2) {
+                margin-left: 10px;
+            }
+
+            h4 {
+                font-weight: 600;
+            }
+
+            a {
+                text-decoration: none;
+                color: #111;
+            }
+
+            img {
+                width: 170px;
+            }
+        }
+    }
+}
+
+// Category Section
+.shop-category {
+    width: 100%;
+    height: auto;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h5 {
+            padding: 0;
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #111;
+        }
+    }
+
+    .category {
+        margin-top: 1.2rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .category-card {
+            width: 15.5rem;
+            height: auto;
+            background-color: #F2F3F5;
+            padding: 10px;
+            position: relative;
+            cursor: pointer;
+
+            img {
+                width: 100%;
+            }
+
+            .btn {
+                width: 150px;
+                position: absolute;
+                background-color: #111;
+                border-radius: 0;
+                color: #fff;
+                text-transform: uppercase;
+                margin-left: 2.5rem;
+                margin-top: -3rem;
+
+                display: none;
+
+                box-shadow: 0px 0px 8px 0px #111;
+            }
+
+            h6 {
+                font-weight: 600;
+            }
+
+            &:hover {
+
+                .btn {
+                    display: block;
+                }
+
+                background-color: rgba($color: #000000, $alpha: 0.5);
+            }
+        }
+    }
+}
+
+// Delivery Banner Section
+// .delivery-banner {
+//     width: 100%;
+//     height: auto;
+//     margin-top: 4rem;
+//     margin-bottom: 1rem;
+
+//     .container {
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         background-color: #F8F3F0;
+
+//         section {
+//             padding: 2rem;
+//             width: 50%;
+//         }
+//     }
+// }
+
+
+// Responsive
+@media screen and (max-width: 600px) {
+
+    // Hero Section
+    .hero-section {
+        height: auto;
+        margin-top: 4.5rem;
+
+        .banner {
+            margin-top: 1rem;
+            flex-direction: column;
+
+            section {
+                width: 100%;
+            }
+
+            .banner-description {
+                // margin-top: 5.5rem;
+                padding: 1rem;
+
+                h1 {
+                    font-size: 24px;
+                }
+
+                .btn {
+                    padding: 1rem 1.7rem;
+                    width: 170px;
+                    border-radius: 0;
+                    background-color: #1C1D25;
+                    color: #fff;
+
+                    &:hover {
+                        box-shadow: 0px 0px 8px 0px #1C1D25;
+                    }
+                }
+            }
+
+            .banner-img {
+                img {
+                    width: 200px;
+                    z-index: 1;
+                    margin-left: 10rem;
+                }
+
+                .item-description {
+                    position: absolute;
+                    left: 15px;
+                    bottom: 0;
+
+                    .item-card {
+                        border-radius: 5px;
+                        padding: 1.5rem;
+                        width: 250px;
+                        height: 200px;
+                        background-color: #fff;
+
+                        strike {
+                            font-size: 12px;
+                        }
+
+                        p {
+                            margin: 0;
+                        }
+
+                        h4 {
+                            font-weight: 600;
+                        }
+
+                        a {
+                            text-decoration: none;
+                            color: #111;
+                        }
+                    }
+                }
+
+                .discount-tag {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    // Top Seller Section
+    .top-seller {
+        margin-top: 3rem;
+
+        .top-seller-products {
+            .product-card {
+                width: 100%;
+                height: auto;
+                margin-bottom: 1rem;
+
+                .btn {
+                    width: 200px;
+                    margin-left: 4.5rem;
+                }
+            }
+        }
+    }
+
+    // Offer Deals Section
+    .offer-deals {
+
+        .container {
+            flex-direction: column;
+
+            section {
+                width: 100%;
+
+                flex-direction: column;
+
+                &:nth-child(1) {
+                    margin-right: 0;
+                    margin-bottom: 5px;
+                }
+
+                &:nth-child(2) {
+                    margin-left: 0;
+                    margin-top: 5px;
+                }
+
+                h4 {
+                    font-weight: 600;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: #111;
+                }
+
+                img {
+                    width: 150px;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+
+    // Category Section
+    .shop-category {
+
+        .category {
+            margin-top: 1.2rem;
+            display: flex;
+            flex-wrap: wrap;
+
+            .category-card {
+                width: 100%;
+                margin-bottom: 1rem;
+
+                .btn {
+                    width: 200px;
+                    margin-left: 4.5rem;
+                }
+            }
+        }
+    }
+}
