@@ -1,6 +1,8 @@
 import React from 'react'
 import './Header.scss'
 
+import { Link } from 'react-router-dom'
+
 const Header = () => {
     return (
         <>
@@ -15,22 +17,16 @@ const Header = () => {
                     <div className="collapse navbar-collapse" id="navbar">
                         <ul className="navbar-nav ms-auto">
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Home</a>
+                                <Link className="nav-link" to="/">Home</Link>
                             </li>
-                            <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Category
-                                </a>
-                                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a className="dropdown-item" href="#">Action</a></li>
-                                    <li><a className="dropdown-item" href="#">Another action</a></li>
-                                </ul>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/category">Category</Link>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="#">About Us</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Contact</a>
+                                <Link className="nav-link" to="/contact">Contact</Link>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="#"><i className="uil uil-search"></i></a>

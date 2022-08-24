@@ -1,0 +1,47 @@
+.category {
+    margin-top: 5.5rem;
+
+    .container {
+        display: flex;
+        justify-content: center;
+
+        section {
+            &:nth-child(1) {
+                width: 20%;
+            }
+
+            &:nth-child(2) {
+                width: 80%;
+            }
+        }
+
+        .category-part {
+            ul {
+                border: 1px solid #111;
+                border-radius: 0;
+                padding: 10px;
+
+                p {
+                    margin-left: 0.8rem;
+                    font-size: 18px;
+                    margin-bottom: 0;
+                }
+
+                li {
+                    border: none;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: #fff;
+                        background-color: #111;
+                    }
+                }
+            }
+        }
+
+        // .product-part{
+
+        // }
+
+    }
+}
