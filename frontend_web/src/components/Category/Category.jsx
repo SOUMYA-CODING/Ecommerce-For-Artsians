@@ -1,7 +1,28 @@
 import React from 'react'
+import axios from 'axios'
+
+import { useEffect, useState } from 'react'
+
 import './Category.scss'
 
 const Category = () => {
+    const [list, setList] = useState([])
+
+    useEffect(() => {
+        const getList = async () => {
+            try {
+                const res = await axios.get('http://127.0.0.1:8000/categoryList/');
+                console.log(res);
+                const myList = res.data;
+                setList(myList)
+            } catch (error) {
+                console.log(error);
+            }
+        };
+        getList();
+    }, []);
+
+
     return (
         <section className="category">
             <div className="container">
@@ -10,11 +31,9 @@ const Category = () => {
                         <ul class="list-group">
                             <p className='p-1'><strong>Category</strong></p>
 
-                            <li class="list-group-item">An item</li>
-                            <li class="list-group-item">A second item</li>
-                            <li class="list-group-item">A third item</li>
-                            <li class="list-group-item">A fourth item</li>
-                            <li class="list-group-item">And a fifth one</li>
+                            {list.map((lists) => (
+                                <li class="list-group-item">{lists.name}</li>
+                            ))}
 
                             <hr />
 
