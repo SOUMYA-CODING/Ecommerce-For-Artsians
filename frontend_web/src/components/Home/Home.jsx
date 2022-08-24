@@ -1,6 +1,8 @@
 import React from 'react'
 import './Home.scss'
 
+import { Link } from 'react-router-dom'
+
 const Home = () => {
     return (
         <>
@@ -11,7 +13,7 @@ const Home = () => {
                         <section className='banner-description'>
                             <h1>shop home decors <br /> & accessories</h1>
                             <p>Shop kitchen ware, office accessories, fashion bags, dolls, toys, punjabi phulkari dupatta, etc and much more</p>
-                            <a href="#" className='btn mt-2'>View More</a>
+                            <Link to="/category" className='btn mt-2'>View More</Link>
                         </section>
                         <section>
                             <div className='banner-img'>
@@ -20,7 +22,7 @@ const Home = () => {
                                         <p>Decor</p>
                                         <strong><h4>Handmade <br /> Candle Stand</h4></strong>
                                         <p className='mb-2'>Rs 1500 <strike>1900</strike></p>
-                                        <a href="#">
+                                        <a herf="#">
                                             View more &nbsp;
                                             <svg width="51" height="8" viewBox="0 0 51 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M50.3536 4.35355C50.5488 4.15829 50.5488 3.84171 50.3536 3.64645L47.1716 0.464466C46.9763 0.269204 46.6597 0.269204 46.4645 0.464466C46.2692 0.659728 46.2692 0.976311 46.4645 1.17157L49.2929 4L46.4645 6.82843C46.2692 7.02369 46.2692 7.34027 46.4645 7.53553C46.6597 7.7308 46.9763 7.7308 47.1716 7.53553L50.3536 4.35355ZM0 4.5H50V3.5H0V4.5Z" fill="black" />
@@ -43,12 +45,12 @@ const Home = () => {
                 <div className="container">
                     <section className='header'>
                         <h5>Top Seller</h5>
-                        <a href="#">
+                        <Link to="/category">
                             View all &nbsp;
                             <svg width="51" height="8" viewBox="0 0 51 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M50.3536 4.35355C50.5488 4.15829 50.5488 3.84171 50.3536 3.64645L47.1716 0.464466C46.9763 0.269204 46.6597 0.269204 46.4645 0.464466C46.2692 0.659728 46.2692 0.976311 46.4645 1.17157L49.2929 4L46.4645 6.82843C46.2692 7.02369 46.2692 7.34027 46.4645 7.53553C46.6597 7.7308 46.9763 7.7308 47.1716 7.53553L50.3536 4.35355ZM0 4.5H50V3.5H0V4.5Z" fill="black" />
                             </svg>
-                        </a>
+                        </Link>
                     </section>
                     <section className='top-seller-products'>
                         <div className="product-card">
@@ -137,12 +139,12 @@ const Home = () => {
                 <div className="container">
                     <section className='header'>
                         <h5>Shop by categories</h5>
-                        <a href="#">
+                        <Link to="/category">
                             View all &nbsp;
                             <svg width="51" height="8" viewBox="0 0 51 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M50.3536 4.35355C50.5488 4.15829 50.5488 3.84171 50.3536 3.64645L47.1716 0.464466C46.9763 0.269204 46.6597 0.269204 46.4645 0.464466C46.2692 0.659728 46.2692 0.976311 46.4645 1.17157L49.2929 4L46.4645 6.82843C46.2692 7.02369 46.2692 7.34027 46.4645 7.53553C46.6597 7.7308 46.9763 7.7308 47.1716 7.53553L50.3536 4.35355ZM0 4.5H50V3.5H0V4.5Z" fill="black" />
                             </svg>
-                        </a>
+                        </Link>
                     </section>
                     <section className='category'>
                         <div className="category-card">

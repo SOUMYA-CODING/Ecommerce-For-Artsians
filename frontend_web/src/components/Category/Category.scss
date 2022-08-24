@@ -1,4 +1,4 @@
-.category {
+.category-page {
     margin-top: 5.5rem;
 
     .container {
@@ -39,9 +39,104 @@
             }
         }
 
-        // .product-part{
+        .product-part {
+            margin-left: 1rem;
+            display: flex;
+            flex-wrap: wrap;
 
-        // }
+            .product-card {
+                width: 20rem;
+                padding: 10px;
+                border-radius: 10px;
+                cursor: pointer;
+                margin: 5px;
 
+                img {
+                    width: 100%;
+                    background-color: #F2F3F5;
+                    border-radius: 10px;
+                }
+
+                &:hover {
+                    background-color: #F2F3F5;
+
+                    img {
+                        background-color: #F8F3F0;
+                    }
+                }
+
+                .product-body {
+                    width: 100%;
+                    margin-top: 10px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    section {
+                        &:nth-child(1) {
+                            width: 85%;
+                        }
+
+                        &:nth-child(2) {
+                            width: 15%;
+                            display: flex;
+                            justify-content: flex-end;
+                        }
+                    }
+
+                    p {
+                        margin: 0;
+                        padding: 0;
+                        font-weight: 600;
+
+                        strike {
+                            font-size: 12px;
+                        }
+                    }
+
+                    button {
+                        width: 35px;
+                        height: 35px;
+                        background-color: #111;
+                        border-radius: 20px;
+                        color: #fff;
+
+                        &:hover {
+                            box-shadow: 0px 0px 5px 0px #111;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Responsive
+@media screen and (max-width: 600px) {
+    .category-page {
+        margin-top: 5rem;
+
+        .container {
+            flex-direction: column;
+
+            section {
+                &:nth-child(1) {
+                    width: 100%;
+                }
+
+                &:nth-child(2) {
+                    width: 100%;
+                }
+            }
+
+            .product-part {
+                margin-left: 0;
+
+                .product-card {
+                    width: 100%;
+                    margin-top: 5px;
+                }
+            }
+        }
     }
 }

@@ -5,33 +5,60 @@ import { useEffect, useState } from 'react'
 
 import './Category.scss'
 
+import ProductCard from '../../cards/ProductCard'
+
 const Category = () => {
-    const [list, setList] = useState([])
+    // For category List
+    const [categorylist, setCategoryList] = useState([])
 
     useEffect(() => {
-        const getList = async () => {
+        const getCategoryList = async () => {
             try {
                 const res = await axios.get('http://127.0.0.1:8000/categoryList/');
                 console.log(res);
                 const myList = res.data;
-                setList(myList)
+                setCategoryList(myList)
             } catch (error) {
                 console.log(error);
             }
         };
-        getList();
+        getCategoryList();
     }, []);
+
+    // For Product List
+    const [productlist, setProductList] = useState([])
+
+    useEffect(() => {
+        const getProductList = async () => {
+            try {
+                const res = await axios.get('http://127.0.0.1:8000/productList/');
+                console.log(res);
+                const myList = res.data;
+                setProductList(myList)
+            } catch (error) {
+                console.log(error);
+            }
+        };
+        getProductList();
+    }, []);
+
+    const productData = productlist.map(list => {
+        return <ProductCard
+            name={list.name}
+            price={list.price}
+        />
+    })
 
 
     return (
-        <section className="category">
+        <section className="category-page">
             <div className="container">
                 <section>
                     <div className="category-part">
                         <ul class="list-group">
                             <p className='p-1'><strong>Category</strong></p>
 
-                            {list.map((lists) => (
+                            {categorylist.map((lists) => (
                                 <li class="list-group-item">{lists.name}</li>
                             ))}
 
@@ -49,9 +76,7 @@ const Category = () => {
                 </section>
                 <section>
                     <div className="product-part">
-                        <div className="product-card">
-
-                        </div>
+                        {productData}
                     </div>
                 </section>
             </div>
