@@ -1,4 +1,3 @@
-from dataclasses import fields
 from rest_framework import serializers
 from . models import ProductCategory, Product
 
@@ -14,4 +13,4 @@ class ProductCategorySerializer(serializers.ModelSerializer):
 class ProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
-        fields = '__all__'
+        fields = "__all__"

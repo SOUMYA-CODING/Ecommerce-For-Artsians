@@ -44,6 +44,7 @@ const Category = () => {
 
     const productData = productlist.map(list => {
         return <ProductCard
+            // photo=''{list.photo}
             photo={list.photo}
             name={list.name}
             price={list.price}
