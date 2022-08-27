@@ -45,7 +45,7 @@
             flex-wrap: wrap;
 
             .product-card {
-                width: 20rem;
+                width: 17.5rem;
                 padding: 10px;
                 border-radius: 10px;
                 cursor: pointer;
@@ -94,12 +94,15 @@
                         }
                     }
 
-                    button {
+                    a {
                         width: 35px;
                         height: 35px;
                         background-color: #111;
                         border-radius: 20px;
                         color: #fff;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
 
                         &:hover {
                             box-shadow: 0px 0px 5px 0px #111;

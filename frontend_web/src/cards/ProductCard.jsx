@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const ProductCard = (props) => {
 
@@ -11,7 +12,7 @@ const ProductCard = (props) => {
                     <p>{props.price} &nbsp; <strike>Rs 190</strike></p>
                 </section>
                 <section>
-                    <button><i class="uil uil-plus"></i></button>
+                    <Link to="/product"><i class="uil uil-plus"></i></Link>
                 </section>
             </div>
         </div>
