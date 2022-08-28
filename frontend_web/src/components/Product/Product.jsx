@@ -1,13 +1,17 @@
 import React from 'react'
 import './Product.scss'
 
+import { useState } from 'react'
+
 const Product = () => {
+    const [count, setCount] = useState(1)
+
     return (
         <section className="product-page">
             <div className="container">
                 <section>
                     {/* Image */}
-                    <img src="http://127.0.0.1:8000/media/product_images/Image_3.png" alt="" />
+                    <img src="http://127.0.0.1:8000/media/product_images/Image_10.png" alt="" />
                 </section>
                 <section>
                     {/* Descriptions */}
@@ -22,9 +26,9 @@ const Product = () => {
                     <div className='buy-section'>
                         <div>
                             <div className="btn-group" role="group" aria-label="Basic example">
-                                <button type="button" className="btn"><i class="uil uil-minus"></i></button>
-                                <input type="text" name="" id="" value={0} />
-                                <button type="button" className="btn"><i class="uil uil-plus"></i></button>
+                                <button type="button" className="btn" onClick={() => count > 1 ? setCount(count - 1) : setCount(1)}><i class="uil uil-minus"></i></button>
+                                <input type="text" name="itemCount" id="itemCount" value={count} />
+                                <button type="button" className="btn" onClick={() => setCount(count + 1)}><i class="uil uil-plus"></i></button>
                             </div>
                         </div>
                         <div>
