@@ -1,5 +1,5 @@
 import React from 'react'
-import axios from 'axios'
+// import axios from 'axios'
 
 import { useEffect, useState } from 'react'
 
@@ -14,9 +14,8 @@ const Category = () => {
     useEffect(() => {
         const getCategoryList = async () => {
             try {
-                const res = await axios.get('http://127.0.0.1:8000/categoryList/');
-                console.log(res);
-                const myList = res.data;
+                let res = await fetch('http://127.0.0.1:8000/categoryList/');
+                let myList = await res.json();
                 setCategoryList(myList)
             } catch (error) {
                 console.log(error);
@@ -31,9 +30,8 @@ const Category = () => {
     useEffect(() => {
         const getProductList = async () => {
             try {
-                const res = await axios.get('http://127.0.0.1:8000/productList/');
-                console.log(res);
-                const myList = res.data;
+                const res = await fetch('http://127.0.0.1:8000/productList/');
+                const myList = await res.json();
                 setProductList(myList)
             } catch (error) {
                 console.log(error);
@@ -44,7 +42,7 @@ const Category = () => {
 
     const productData = productlist.map(list => {
         return <ProductCard
-            // photo=''{list.photo}
+            id={list.id}
             photo={list.photo}
             name={list.name}
             price={list.price}

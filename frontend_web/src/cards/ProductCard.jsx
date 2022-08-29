@@ -12,7 +12,7 @@ const ProductCard = (props) => {
                     <p>{props.price} &nbsp; <strike>Rs 190</strike></p>
                 </section>
                 <section>
-                    <Link to="/product"><i class="uil uil-plus"></i></Link>
+                    <Link to='/product/' params={{ id: props.id }}><i class="uil uil-plus"></i></Link>
                 </section>
             </div>
         </div>

@@ -10,13 +10,13 @@ const App = () => {
       <Header />
       <Routes>
         <Route exact path='/' element={<Home />} />
-        <Route exact path='/contact' element={<Contact />} />
-        <Route exact path='/category' element={<Category />} />
-        <Route exact path='/product' element={<Product />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/category' element={<Category />} />
+        <Route path='/product/:id' element={<Product />} />
 
         {/* Login Registration Link */}
-        <Route exact path='/login' element={<Login />} />
-        <Route exact path='/registration' element={<Registration />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/registration' element={<Registration />} />
       </Routes>
       <Footer />
     </main>

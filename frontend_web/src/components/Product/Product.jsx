@@ -1,26 +1,45 @@
 import React from 'react'
 import './Product.scss'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
 
 const Product = () => {
+    // Get the ID
+    const { id } = useParams();
+
+    // Counter
     const [count, setCount] = useState(1)
+
+    // For Product Data
+    const [product, setProduct] = useState([])
+
+    useEffect(() => {
+        const getProductData = async () => {
+            try {
+                const res = await fetch('http://127.0.0.1:8000/productList/' + id + '/');
+                const myList = await res.json();
+                console.log(myList)
+                setProduct(myList)
+            } catch (error) {
+                console.log(error);
+            }
+        };
+        getProductData();
+    }, []);
 
     return (
         <section className="product-page">
             <div className="container">
                 <section>
-                    {/* Image */}
-                    <img src="http://127.0.0.1:8000/media/product_images/Image_10.png" alt="" />
+                    <img src={product.photo} alt="" />
                 </section>
                 <section>
-                    {/* Descriptions */}
-                    <h2>File Tray</h2>
-                    <h5 className='mt-1'>Rs 1400 <strike>Rs1900</strike></h5>
+                    <h2>{product.name}</h2>
+                    <h5 className='mt-1'>{product.price} <strike>Rs1900</strike></h5>
 
                     <h4 className='mt-4'>Description</h4>
-                    <p className='mt-1'>Bamboo File Tray, Geometric Authentic Handmade Tray, Eco-Friendly, Dinner Tray For Eating,
-                        Mini Table For Books, Catering & Household Purposes (Brown, Standard)</p>
+                    <p className='mt-1'>{product.description}</p>
 
                     <h4 className='mt-4'>Quantity</h4>
                     <div className='buy-section'>
