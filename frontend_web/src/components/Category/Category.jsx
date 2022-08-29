@@ -1,5 +1,5 @@
 import React from 'react'
-// import axios from 'axios'
+import axios from 'axios'
 
 import { useEffect, useState } from 'react'
 
@@ -46,9 +46,9 @@ const Category = () => {
             photo={list.photo}
             name={list.name}
             price={list.price}
+            dumyprice={list.price + 150}
         />
     })
-
 
     return (
         <section className="category-page">
@@ -59,7 +59,9 @@ const Category = () => {
                             <p className='p-1'><strong>Category</strong></p>
 
                             {categorylist.map((lists) => (
-                                <li class="list-group-item">{lists.name}</li>
+                                <li class="list-group-item">
+                                    {lists.name}
+                                </li>
                             ))}
 
                             <hr />

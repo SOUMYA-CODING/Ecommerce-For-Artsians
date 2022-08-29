@@ -19,7 +19,6 @@ const Product = () => {
             try {
                 const res = await fetch('http://127.0.0.1:8000/productList/' + id + '/');
                 const myList = await res.json();
-                console.log(myList)
                 setProduct(myList)
             } catch (error) {
                 console.log(error);
@@ -36,12 +35,13 @@ const Product = () => {
                 </section>
                 <section>
                     <h2>{product.name}</h2>
-                    <h5 className='mt-1'>{product.price} <strike>Rs1900</strike></h5>
+                    <h5 className='mt-1 mb-3'>Rs{product.price} <strike>Rs{product.price + 150}</strike></h5>
 
-                    <h4 className='mt-4'>Description</h4>
-                    <p className='mt-1'>{product.description}</p>
+                    {/* <span className='bestseller'>{product.bestseller ? "Bestseller" : null}</span> */}
 
-                    <h4 className='mt-4'>Quantity</h4>
+                    <p className='mt-3'>{product.description}</p>
+
+                    <h5 className='mt-4'>Quantity</h5>
                     <div className='buy-section'>
                         <div>
                             <div className="btn-group" role="group" aria-label="Basic example">
@@ -51,7 +51,9 @@ const Product = () => {
                             </div>
                         </div>
                         <div>
-                            <button type="button" className="btn">Add to cart &nbsp; <i class="uil uil-shopping-cart"></i></button>
+                            {
+                                product.availability ? <button type="button" className="btn">Add to cart &nbsp; <i class="uil uil-shopping-cart"></i></button> : "Not Available"
+                            }
                         </div>
                     </div>
                 </section>

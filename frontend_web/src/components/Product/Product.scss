@@ -26,6 +26,7 @@
         h2 {
             font-size: 40px;
             font-weight: 600;
+            text-transform: uppercase;
         }
 
         p {
@@ -61,6 +62,13 @@
             width: 50px;
             text-align: center;
             border: 1px solid #111;
+        }
+
+        .bestseller {
+            color: #FFF;
+            background-color: orange;
+            padding: 2px 7px;
+            text-transform: uppercase;
         }
     }
 }
