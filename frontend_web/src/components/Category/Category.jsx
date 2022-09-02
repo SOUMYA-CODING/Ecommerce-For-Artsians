@@ -66,7 +66,7 @@ const Category = () => {
 
                             {categorylist.map((lists) => (
                                 <li class="list-group-item">
-                                    <a onClick={getProductList}>{lists.name}</a>
+                                    <a onClick={getProductList} key={lists.id}>{lists.name}</a>
                                 </li>
                             ))}
 
