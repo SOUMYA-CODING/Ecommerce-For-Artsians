@@ -50,6 +50,12 @@ const Category = () => {
         />
     })
 
+    // Product List by category
+    const getProductList = () => {
+
+    }
+
+
     return (
         <section className="category-page">
             <div className="container">
@@ -60,7 +66,7 @@ const Category = () => {
 
                             {categorylist.map((lists) => (
                                 <li class="list-group-item">
-                                    {lists.name}
+                                    <a onClick={getProductList}>{lists.name}</a>
                                 </li>
                             ))}
 
@@ -68,10 +74,10 @@ const Category = () => {
 
                             <p className='p-1'><strong>Price</strong></p>
 
-                            <li class="list-group-item">Under Rs 1000</li>
-                            <li class="list-group-item">Rs 1000 - Rs 2000</li>
-                            <li class="list-group-item">Rs 2000 - Rs 3000</li>
-                            <li class="list-group-item">Over Rs 3000</li>
+                            <li class="list-group-item"><a>Under Rs 1000</a></li>
+                            <li class="list-group-item"><a>Rs 1000 - Rs 2000</a></li>
+                            <li class="list-group-item"><a>Rs 2000 - Rs 3000</a></li>
+                            <li class="list-group-item"><a>Over Rs 3000</a></li>
 
                         </ul>
                     </div>
