@@ -3,7 +3,11 @@ import './Login.scss'
 
 const Login = () => {
     return (
-        <div>Login</div>
+        <section id="login-page">
+            <div className="container">
+
+            </div>
+        </section>
     )
 }
 

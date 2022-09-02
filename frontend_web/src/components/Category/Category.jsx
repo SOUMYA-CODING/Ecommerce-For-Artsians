@@ -14,9 +14,10 @@ const Category = () => {
     useEffect(() => {
         const getCategoryList = async () => {
             try {
-                let res = await fetch('http://127.0.0.1:8000/categoryList/');
-                let myList = await res.json();
+                const res = await fetch('http://127.0.0.1:8000/categoryList/');
+                const myList = await res.json();
                 setCategoryList(myList)
+                console.log(myList)
             } catch (error) {
                 console.log(error);
             }
@@ -33,6 +34,7 @@ const Category = () => {
                 const res = await fetch('http://127.0.0.1:8000/productList/');
                 const myList = await res.json();
                 setProductList(myList)
+                console.log(myList)
             } catch (error) {
                 console.log(error);
             }
@@ -51,9 +53,9 @@ const Category = () => {
     })
 
     // Product List by category
-    const getProductList = () => {
+    // const getProductList = () => {
 
-    }
+    // }
 
 
     return (
@@ -66,7 +68,7 @@ const Category = () => {
 
                             {categorylist.map((lists) => (
                                 <li class="list-group-item">
-                                    <a onClick={getProductList} key={lists.id}>{lists.name}</a>
+                                    {lists.name}
                                 </li>
                             ))}
 
