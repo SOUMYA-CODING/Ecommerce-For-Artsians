@@ -68,7 +68,7 @@ const Category = () => {
 
                             {categorylist.map((lists) => (
                                 <li class="list-group-item">
-                                    {lists.name}
+                                    <a href="">{lists.name}</a>
                                 </li>
                             ))}
 
