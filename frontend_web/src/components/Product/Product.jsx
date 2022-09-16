@@ -50,7 +50,7 @@ const Product = () => {
                                 <button type="button" className="btn" onClick={() => setCount(count + 1)}><i class="uil uil-plus"></i></button>
                             </div>
                         </div>
-                        <div>
+                        <div className='add_to_cart'>
                             {
                                 product.availability ? <button type="button" className="btn">Add to cart &nbsp; <i class="uil uil-shopping-cart"></i></button> : "Not Available"
                             }
