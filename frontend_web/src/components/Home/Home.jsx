@@ -33,7 +33,7 @@ const Home = () => {
                                 <div className='discount-tag'>
                                     <p>50%</p>
                                 </div>
-                                <img src="assets/images/Image (12).png" alt="" />
+                                <img src="assets/images/Image_(12).png" alt="" />
                             </div>
                         </section>
                     </div>
